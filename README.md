@@ -58,8 +58,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 <!-- ROADMAP -->
-## Expermients and Results:
-Experiments and results can be viewed at [Documentation](https://example.com)
+## Experiments and Results:
+The results of the experiments and a more detailed description of the theoretical background, the used resources/methods and the general usage of this repository can be found in the [report](https://github.com/Jakhmola/Brain-Tumor-Segmentation/blob/main/Dissertation/Dissertation.pdf).
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
