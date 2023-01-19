@@ -8,7 +8,8 @@ import matplotlib.patches as mpatches
 
 from app import app
 
-#generates segmentation mask given MRI file
+
+# generates segmentation mask given MRI file
 def mask_generator(uploaded_file):
     SEGMENT_CLASSES = {
         0: 'NOT tumor',
@@ -42,5 +43,6 @@ def mask_generator(uploaded_file):
         # put those patched as legend-handles into the legend
         plt.legend(handles=patches, bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0., title='Mask Labels', fontsize=18)
         # plt.show()
-        fig.savefig(os.path.join(app.config['UPLOAD_PATH'], 'prediction'+str(n_slice)+'.png'), dpi=1000, transparent=True)
+        fig.savefig(os.path.join(app.config['UPLOAD_PATH'], 'prediction' + str(n_slice) + '.png'), dpi=1000,
+                    transparent=True)
     return

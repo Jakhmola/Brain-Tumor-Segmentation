@@ -1,7 +1,7 @@
 import numpy as np
 
-#Custom datagenerator to feed MRI and mask to the model
 
+# Custom datagenerator to feed MRI and mask to the model
 def load_img(img_dir, img_list):
     images = []
     for i, image_name in enumerate(img_list):

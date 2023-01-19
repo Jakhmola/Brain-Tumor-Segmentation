@@ -5,12 +5,14 @@ import generate_mask
 app = Flask(__name__)
 app.config['UPLOAD_PATH'] = 'uploads'
 
-#home page
+
+# home page
 @app.route('/')
 def index():
     return render_template('index.html')
 
-#to upload MRI file
+
+# upload MRI scans as numpy files
 @app.route('/', methods=['POST'])
 def upload_file():
     if request.method == 'POST':
@@ -20,7 +22,8 @@ def upload_file():
         return redirect(url_for('display_layers'))
     return render_template('index.html')
 
-#go to second webpage to show prediction
+
+# webpage to show prediction
 @app.route('/predict')
 def display_layers():
     files = os.listdir(app.config['UPLOAD_PATH'])
