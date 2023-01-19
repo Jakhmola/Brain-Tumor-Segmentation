@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    <div class = "bg">
+        <h2 class="header2">
+          Explore Layers of Brain
+        </h2>
+
+    <div class="slidecontainer">
+        <input type="range" min="1" max="127" value="65" class="slider" id="myRange" oninput=myFunc()>
+        <p id="rangeValue" style="color:white;position:relative;top:8px;">65</p>
+        <div class = 'mask'>
+        <img src="{{ url_for('upload', filename='prediction.png') }}"  id="img">
+        </div>
+    </div>
+        </div>
+{% endblock %}
